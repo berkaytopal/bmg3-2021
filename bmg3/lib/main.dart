@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'WorldNews/worlnewsHome.dart';
+
 void main(List<String> args) {
   runApp(new MaterialApp(
     home: MyApp(),
@@ -33,7 +35,12 @@ class _MyAppState extends State<MyApp> {
             Card(
               margin: EdgeInsets.all(8.0),
               child: InkWell(
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => WorldNews()),
+                  );
+                 },
                 splashColor: Colors.grey,
                 child: Center(
                   child: Column(
@@ -102,7 +109,7 @@ class _MyAppState extends State<MyApp> {
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget> [
                       Icon(Icons.help_outlined, size:70.0, ),
-                      Text("          Bunları Biliyor Musunuz?", style : new TextStyle(fontSize: 18.0))
+                      Text("Bunları Biliyor Musunuz?", style : new TextStyle(fontSize: 18.0))
                     ],),
                 ),)
             ),
