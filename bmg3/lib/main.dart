@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'TrNews/trnewsHome.dart';
 import 'WorldNews/worlnewsHome.dart';
 
 void main(List<String> args) {
@@ -56,7 +57,10 @@ class _MyAppState extends State<MyApp> {
             Card(
               margin: EdgeInsets.all(8.0),
               child: InkWell(
-                onTap: (){},
+                onTap: (){Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TrNews()),
+                  );},
                 splashColor: Colors.grey,
                 child: Center(
                   child: Column(
