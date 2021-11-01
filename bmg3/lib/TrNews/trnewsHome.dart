@@ -50,14 +50,17 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        
         title: Text(widget.title),
         centerTitle: true,
       ),
+      backgroundColor: Colors.black,
       body: Center(
           child: ListView.builder(
               itemCount: articles.length,
               itemBuilder: (context, index) {
                 return Card(
+                  color: Colors.blueGrey,
                   child: Column(
                     children: [
                       Image.network(articles[index].urlToImage ??
@@ -71,16 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         padding: const EdgeInsets.all(16.0),
                         child: Text(articles[index].description ?? ''),
                       ),
-                      ButtonBar(
-                        alignment: MainAxisAlignment.start,
-                        children: [
-                          MaterialButton(
-                              onPressed: () async {
-                                await launch(articles[index].url ?? '');
-                              },
-                              child: Text('Habere Git')),
-                        ],
-                      ),
+                      
                     ],
                   ),
                 );

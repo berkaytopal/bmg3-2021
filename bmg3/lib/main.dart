@@ -1,3 +1,4 @@
+import 'package:bmg3/question_module/question_page.dart';
 import 'package:flutter/material.dart';
 
 import 'TrNews/trnewsHome.dart';
@@ -105,7 +106,10 @@ class _MyAppState extends State<MyApp> {
             Card(
               margin: EdgeInsets.all(8.0),
               child: InkWell(
-                onTap: (){},
+                 onTap: (){Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => BilgiTesti()),
+                  );},
                 splashColor: Colors.grey,
                 child: Center(
                   child: Column(
@@ -127,7 +131,7 @@ class _MyAppState extends State<MyApp> {
 
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget> [
-                      Icon(Icons.local_phone_rounded, size:70.0, ),
+                      Icon(Icons.local_phone_rounded,size:70.0, ),
                       Text("İletişim", style : new TextStyle(fontSize: 18.0))
                     ],),
                 ),)

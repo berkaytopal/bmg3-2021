@@ -15,7 +15,7 @@ class NewsService {
 
   static Future<List<Articles>> getNews() async {
     String url =
-        'http://newsapi.org/v2/top-headlines?country=tr&category=business&apiKey=f58b94449b4f45b9844a296497a93747';
+        'https://newsapi.org/v2/top-headlines?country=tr&apiKey=f58b94449b4f45b9844a296497a93747';
 
     final response = await http.get(url);
 
